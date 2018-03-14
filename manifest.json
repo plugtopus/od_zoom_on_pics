@@ -1,0 +1,27 @@
+{
+   "background": {
+      "scripts": ["core/common.js", "core/background.js", "core/jquery-2.2.4.min.js"]
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "core/jquery-2.2.4.min.js", "core/default.js", "core/hoverzoom.js", "core/cs.js" ],
+      "matches": [ "http://*.ok.ru/*", "https://*.ok.ru/*", "http://*.ok.youla.io/*", "https://*.ok.youla.io/*" ]
+   } ],
+   "default_locale": "ru",
+   "description": "__MSG_desc__",
+   "icons": {
+      "128": "img/128.png",
+      "64": "img/64.png",
+      "48": "img/48.png",
+      "16": "img/16.png"
+
+   },
+   "manifest_version": 2,
+   "name": "__MSG_name__",
+   "permissions": [ "webRequestBlocking", "webRequest", "storage", "cookies", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2018.3.14.4",
+   "web_accessible_resources": [ "img/*", "core/*" ],
+   "author": "Plugtopus Agency",
+   "homepage_url": "https://plugtopus.agency"
+}
